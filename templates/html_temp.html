@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="/static/logo.png" type="image/x-icon" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css_temp.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="bg-light border navbar navbar-expand-md navbar-light">
+      <!-- <div class="container-fluid"> -->
+          <a style="text-decoration:none; font-size:40px; font-family: Comic Sans MS; margin-left:20px;" href="/"><span class="text-secondary">Coding Gamification</span></a>
+          <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+              {% if session["user_id"] %}
+              <ul class="navbar-nav ms-auto mt-2">
+                  <li style="text-decoration:none; font-size:30px; font-family:Comic Sans MS; margin-right:20px;" class="nav-item"><a class="nav-link" href="/logout"><span class="text-secondary">Log Out</span></a></li>
+              </ul>
+              {% else %}
+                  <ul class="navbar-nav ms-auto mt-2">
+                      <li style="text-decoration:none; font-size:20px; font-family:Comic Sans MS; margin-right:20px; " class="nav-item"><a class="nav-link" href="/register"><span class="text-secondary">Register</span></a></li>
+                      <li style="text-decoration:none; font-size:20px; font-family:Comic Sans MS; margin-right:20px;" class="nav-item"><a class="nav-link" href="/login"><span class="text-secondary">Log Out</span></a></li>
+                  </ul>
+              {% endif %}
+          </div>
+      <!-- </div> -->
+  </nav>
+  <header>
+    <img src= "/static/logo.png" alt="my logo" height = 610>
+    <h1 style="color: white; font-weight: bold; font-size: 60px;"> &nbsp;Slide down to code a game</h1>
+    <br>
+    <br>
+    <form action="/beginner">
+  <button class="gradient-btn"> &nbsp;  &nbsp;  &nbsp;   <b>Heads & Tails(Easy)</b>    &nbsp;  &nbsp;  &nbsp; <br><br>Input/Output Statements <br> If-Else Statements<br> Random Module<br> <br> <img src= "/static/coin_toss.jpg" height=280 ><br></button>
+</form>
+  <form action="/intermediate">
+  <button class="gradient-btn"> &nbsp;  &nbsp;  &nbsp;   <b>Trivia(Intermediate)</b>     &nbsp;  &nbsp;  &nbsp; <br><br> For Loops <br> Dictionaries<br>Type Casting <br> <br> <img src= "/static/trivia.jpg" height=280><br></button>
+</form>
+  <form action="/hard">
+  <button class="gradient-btn"> &nbsp;  &nbsp;  &nbsp;  &nbsp;   <b>Wordle(Challenging)</b>   &nbsp;  &nbsp;  &nbsp;  &nbsp; <br><br>  Functions <br> Arrays <br> While Loops<br> <br> <img src= "/static/wordle.png" height=280><br></button>
+</form>
+<style>
+  .gradient-btn {
+      background-color: #a5b39a;
+      background-image: linear-gradient(to bottom, #fffacd);
+      border: round;
+      color: #FFFFFF;
+      text-align: center;
+      text-decoration: none;
+      /* display: inline-block; */
+      font-size: 32px;
+      margin: 16px 16px;
+      cursor: pointer;
+      padding: 24px 48px;
+      border-radius: 12px;
+      box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+      transition: all 0.3s ease-in-out;
+  }
+
+  .gradient-btn:hover {
+      background-position: 0px -30px;
+      box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.25);
+  
+  }
+</style>
+  </header>
+
+  
+
+
+</body>
+</html>
